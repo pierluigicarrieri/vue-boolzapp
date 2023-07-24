@@ -4,6 +4,12 @@ Vue.createApp ({
 
         return {
 
+            user: {
+                name: "",
+                avatar: "",
+                messages: [],
+            },
+
             contatti: [
                 {
                     name: "Michele",

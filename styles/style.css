@@ -1,5 +1,20 @@
-* {
+:root {
+    --main-text: 12px;
+    --secondary-text: 10px;
+}
+
+/* * {
     border: 1px dashed red;
+} */
+
+main {
+    background-image: url("../img/mine.jpg");
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
 .col-10 {
@@ -13,3 +28,16 @@
 #bottom_app_row {
     height: 85%;
 }
+
+.main_text {
+    font-size: var(--main-text);
+}
+
+.secondary_text {
+    font-size: var(--secondary-text);
+}
+
+
+/* main_text fw-semibold */
+
+/* secondary_text text-body-tertiary */
