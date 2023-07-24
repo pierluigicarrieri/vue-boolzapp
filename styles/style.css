@@ -37,6 +37,16 @@ img {
     font-size: var(--secondary-text);
 }
 
+.user_message {
+    min-width: 30%;
+    background-color: #E7F8D7;
+}
+
+.contact_message {
+    min-width: 30%;
+    background-color: #FFFFFF;
+}
+
 
 /* main_text fw-semibold */
 
