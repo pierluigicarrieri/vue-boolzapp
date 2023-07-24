@@ -72,13 +72,13 @@
 
                                 <div class="flex-grow-1 overflow-auto">
 
-                                    <div class="d-flex py-2">
+                                    <div class="d-flex py-2" v-for="contact in contatti">
 
-                                        <img src="img/avatar_1.jpg" alt="">
+                                        <img :src=" `img/avatar` + contact.avatar + `.jpg` " alt="contact_avatar">
 
                                         <div class="flex-grow-1 px-1">
 
-                                            <div class="main_text fw-semibold">Michele</div>
+                                            <div class="main_text fw-semibold">{{contact.name}}</div>
 
                                             <div class="secondary_text text-body-tertiary">Ultimo messaggio inviato</div>
 
@@ -87,13 +87,6 @@
                                         <div class="secondary_text text-body-tertiary">12:00</div>
 
                                     </div>
-
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ipsum provident nam, harum quasi maxime consectetur. Adipisci perspiciatis iste, sequi possimus, ab enim, saepe suscipit dicta omnis iure reprehenderit commodi.
-                                    Maxime asperiores alias natus est ullam perferendis, sed voluptate odio placeat temporibus sint magnam, praesentium voluptates veritatis aliquam rem officia. Voluptate incidunt placeat soluta autem dignissimos consequuntur veritatis fuga voluptatum?
-                                    Dolor, laboriosam tempora fugiat odit amet, tempore quae consectetur aut aspernatur, consequuntur sunt suscipit provident doloremque cumque minus magni voluptatibus labore nam hic fuga accusamus magnam! Sit amet placeat quia?
-                                    Voluptates quidem molestiae dicta doloremque explicabo atque totam assumenda, pariatur tempora id magni eius reprehenderit vel aspernatur debitis neque, corrupti facere quos! Iusto aut ratione, enim deserunt illo facilis doloremque?
-                                    Eligendi inventore perspiciatis ipsa quo libero officiis expedita optio, possimus magnam sit beatae cupiditate saepe et necessitatibus vel, cum nulla, labore obcaecati porro repellat in voluptates error velit fugiat? Culpa?
-                                    Mollitia quas sunt, sed officia id quam dolores ipsam voluptatibus itaque, qui natus accusamus placeat culpa sit? Sequi deserunt architecto assumenda magnam? Tempore consequatur quisquam error odit facere similique quidem?
 
                                 </div>
 

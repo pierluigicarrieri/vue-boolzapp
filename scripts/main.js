@@ -1,3 +1,5 @@
+"use strict";
+
 Vue.createApp ({
 
     data () {
@@ -97,6 +99,10 @@ Vue.createApp ({
     },
 
     methods: {
+
+        getAvatar() {
+            return "img/avatar_1.jpg";
+        }
 
     }
 
