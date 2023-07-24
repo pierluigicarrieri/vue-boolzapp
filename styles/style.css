@@ -1,0 +1,15 @@
+* {
+    border: 1px dashed red;
+}
+
+.col-10 {
+    margin-top: -100px;
+}
+
+#top_app_row {
+    height: 15%;
+}
+
+#bottom_app_row {
+    height: 85%;
+}
