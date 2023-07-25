@@ -141,7 +141,8 @@
 
                                     <a href="#" class="ps-2 pe-3"><i class="fa-regular fa-face-smile text-body-tertiary"></i></a>
 
-                                    <input class="form-control flex-grow-1 me-2 main_text" type="search" placeholder="Scrivi un messaggio" aria-label="Search">
+                                    <input class="form-control flex-grow-1 me-2 main_text" type="search" placeholder="Scrivi un messaggio" 
+                                    aria-label="Search" v-model="newMessage.message" @keyup.enter="addNewMessage">
 
                                     <a href="#" class="ps-3 pe-2"><i class="fa-solid fa-microphone text-body-tertiary"></i></a>
 

@@ -6,7 +6,13 @@ Vue.createApp ({
 
         return {
 
-            activeContact : null,
+            activeContact: null,
+
+            newMessage: {
+                date: "10/01/2020 15:30:55",
+                message: "",
+                status: "sent",
+            },
 
             contatti: [
                 {
@@ -103,6 +109,14 @@ Vue.createApp ({
         onClick(contatto) {
 
             this.activeContact = contatto;
+
+        },
+
+        addNewMessage () {
+
+            const newMessageClone = {...this.newMessage};
+
+            this.activeContact.messages.push(newMessageClone);
 
         }
 
