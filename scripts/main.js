@@ -14,6 +14,12 @@ Vue.createApp ({
                 status: "sent",
             },
 
+            autoContactReply: {
+                date: "10/01/2020 15:30:55",
+                message: "ok",
+                status: "received",
+            },
+
             contatti: [
                 {
                     name: "Michele",
@@ -118,7 +124,9 @@ Vue.createApp ({
 
             this.activeContact.messages.push(newMessageClone);
 
-        }
+            setTimeout (() => this.activeContact.messages.push(this.autoContactReply), 1000);
+
+        },
 
     },
 
