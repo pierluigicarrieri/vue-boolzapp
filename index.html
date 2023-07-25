@@ -70,9 +70,10 @@
 
                                 </div>
 
-                                <div class="list-group list-group-flush flex-grow-1 overflow-auto">
+                                <div class="list-group flex-grow-1 overflow-auto">
 
-                                    <div class="list-group-item list-group-item-action d-flex py-2 contact_sidebar" v-for="contact in contatti">
+                                    <div class="list-group-item list-group-item-action d-flex py-2 contact_sidebar" 
+                                    v-for="contact in contatti" @click="onClick(contact)">
 
                                         <img :src=" `img/avatar` + contact.avatar + `.jpg` " alt="contact_avatar">
 
@@ -96,11 +97,11 @@
 
                                 <nav class="d-flex align-items-center px-1 py-2">
 
-                                    <img v-bind:src=" `img/avatar` + contatti[0].avatar + `.jpg` " alt="Contact_1">
+                                    <img v-bind:src=" `img/avatar${activeContact.avatar}.jpg` " alt="Contact_1">
 
                                     <div class="flex-grow-1 px-1">
 
-                                        <div class="main_text fw-semibold">{{contatti[0].name}}</div>
+                                        <div class="main_text fw-semibold">{{activeContact.name}}</div>
 
                                         <div class="secondary_text text-body-tertiary" >Ultimo accesso oggi alle 12:00</div>
 

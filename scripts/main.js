@@ -6,7 +6,7 @@ Vue.createApp ({
 
         return {
 
-            activeUserId : 1,
+            activeContact : null,
 
             contatti: [
                 {
@@ -100,10 +100,19 @@ Vue.createApp ({
 
     methods: {
 
-        getAvatar() {
-            return "img/avatar_1.jpg";
+        onClick(contatto) {
+
+            this.activeContact = contatto;
+
         }
 
+    },
+
+    beforeMount () {
+
+        this.activeContact = this.contatti[0];
+
     }
+
 
 }).mount ("#app");
