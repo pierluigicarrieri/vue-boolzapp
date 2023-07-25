@@ -14,7 +14,8 @@ img {
 }
 
 .col-10 {
-    margin-top: -100px;
+    margin-top: -70px;
+    min-width: 800px;
 }
 
 #top_app_row {

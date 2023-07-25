@@ -6,15 +6,12 @@ Vue.createApp ({
 
         return {
 
-            user: {
-                name: "",
-                avatar: "",
-                messages: [],
-            },
+            activeUserId : 1,
 
             contatti: [
                 {
                     name: "Michele",
+                    id: 1,
                     avatar: "_1",
                     messages: [
                         {
@@ -36,6 +33,7 @@ Vue.createApp ({
                 },
                 {
                     name: "Fabio",
+                    id: 2,
                     avatar: "_2",
                     messages: [
                         {
@@ -57,6 +55,7 @@ Vue.createApp ({
                 },
                 {
                     name: "Samuele",
+                    id: 3,
                     avatar: "_3",
                     messages: [
                         {
@@ -78,6 +77,7 @@ Vue.createApp ({
                 },
                 {
                     name: "Luisa",
+                    id: 4,
                     avatar: "_4",
                     messages: [
                         {
