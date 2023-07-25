@@ -36,11 +36,13 @@ img {
 
 .user_message {
     min-width: 30%;
+    margin-left: auto;
     background-color: #E7F8D7;
 }
 
 .contact_message {
     min-width: 30%;
+    margin-right: auto;
     background-color: #FFFFFF;
 }
 

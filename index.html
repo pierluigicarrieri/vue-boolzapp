@@ -121,23 +121,13 @@
 
                                 <main class="flex-grow-1 overflow-auto p-4">
 
-                                    <div class="message_container d-flex justify-content-end">
+                                    <div class="message_container d-flex my-2" 
+                                    v-for="singleMessage in activeContact.messages">
 
-                                        <div class="user_message d-flex justify-content-between py-2 ps-2 rounded">
+                                        <div class="d-flex justify-content-between py-2 ps-2 rounded" 
+                                        v-bind:class=" (singleMessage.status === 'sent') ? 'user_message' : 'contact_message' ">
 
-                                            <div class="pe-5">Tutto fatto!</div>
-
-                                            <div class="secondary_text text-body-tertiary align-self-end px-1">12:00</div>
-
-                                        </div>  
-
-                                    </div>
-
-                                    <div class="message_container d-flex justify-content-start">
-
-                                        <div class="contact_message d-flex justify-content-between py-2 ps-2 rounded">
-
-                                            <div class="pe-5">Tutto fatto!</div>
+                                            <div class="pe-5">{{singleMessage.message}}</div>
 
                                             <div class="secondary_text text-body-tertiary align-self-end px-1">12:00</div>
 
