@@ -20,6 +20,10 @@ Vue.createApp ({
                 status: "received",
             },
 
+            contattiFiltered: [],
+
+            filter : "",
+
             contatti: [
                 {
                     name: "Michele",
@@ -128,11 +132,21 @@ Vue.createApp ({
 
         },
 
+        filterContacts () {
+
+            this.contattiFiltered = this.contatti.filter((contact) => 
+                contact.name.toLowerCase().includes(this.filter.toLowerCase())
+            )
+
+        }
+
     },
 
     beforeMount () {
 
         this.activeContact = this.contatti[0];
+
+        this.contattiFiltered = this.contatti;
 
     }
 

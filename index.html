@@ -12,6 +12,9 @@
 
 <body class="bg-secondary">
 
+    <!-- Using 2 inner divs after body for "app" vue.js and as a main wrapper,
+    keeping everithing separated -->
+
     <div id="app">
 
         <div id="main_wrapper" class="vh-100 bg-secondary">
@@ -66,14 +69,15 @@
 
                                 <div class="px-2 py-2">
 
-                                    <input class="form-control me-2 main_text" type="search" placeholder="&#xF002; Cerca e inizia una nuova chat" style="font-family:Arial, FontAwesome" aria-label="Search">
+                                    <input class="form-control me-2 main_text" type="search" placeholder="&#xF002; Cerca e inizia una nuova chat" 
+                                    style="font-family:Arial, FontAwesome" aria-label="Search" v-model="filter" @input="filterContacts">
 
                                 </div>
 
                                 <div class="list-group flex-grow-1 overflow-auto">
 
-                                    <div class="list-group-item list-group-item-action d-flex py-2 contact_sidebar" 
-                                    v-for="contact in contatti" @click="onClick(contact)">
+                                    <div class="list-group-item list-group-item-action d-flex py-2" 
+                                    v-for="contact in contattiFiltered" @click="onClick(contact)">
 
                                         <img :src=" `img/avatar` + contact.avatar + `.jpg` " alt="contact_avatar">
 
