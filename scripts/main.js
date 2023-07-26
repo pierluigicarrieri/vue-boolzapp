@@ -6,24 +6,39 @@ Vue.createApp ({
 
         return {
 
+            /* Keeps track of the selected contact, whose messages 
+            are visualized in the right part of the application. 
+            Inizialized as null (see "onMount" below), modified by 
+            "onClick" (see "methods" below) */
             activeContact: null,
 
+            /* Object for the new messages that the user sends to 
+            "activeContact" */
             newMessage: {
                 date: "10/01/2020 15:30:55",
                 message: "",
                 status: "sent",
             },
 
+            /* Object for the automated reply that "activeContact"
+            sends to the user (still saved in "activeContact" object) */
             autoContactReply: {
                 date: "10/01/2020 15:30:55",
                 message: "ok",
                 status: "received",
             },
 
+            /* Array of objects that allows filtering mechanism, initialized 
+            as empty (see "onMount" below) */
             contattiFiltered: [],
 
+            /* Inizialized as an empty string, contacts searchbar in left side 
+            of application passes text with wich to filter contacts 
+            ("contattiFiltered") */
             filter : "",
 
+            /* "contatti" is an array of objects which is the basic data 
+            structure of the application */
             contatti: [
                 {
                     name: "Michele",
@@ -116,12 +131,20 @@ Vue.createApp ({
 
     methods: {
 
+        /* Called by click on single contact, left side of application.
+        Takes an element of "contattiFiltered" as argument, 
+        puts it as value for "activeContact" */
         onClick(contatto) {
 
             this.activeContact = contatto;
 
         },
 
+        /* Called by pressing enter after typing message in input bar on 
+        right side of application. Clones "newMessage" object (its 
+        "message" property updated by v-model), pushes "newMessageClone" 
+        into "activeContact.messages" (latter is an array), outputs automated 
+        answer "autoContactReply" using "setTimeout" function after 1 sec delay */
         addNewMessage () {
 
             const newMessageClone = {...this.newMessage};
@@ -132,6 +155,9 @@ Vue.createApp ({
 
         },
 
+        /* Called by input in left side searchbar. "contattiFiltered" array of 
+        objects is reactively created by a "filter" function on "contatti" original 
+        data array. Used twice "toLowerCase" function to bypass case sensitivity */
         filterContacts () {
 
             this.contattiFiltered = this.contatti.filter((contact) => 
@@ -144,8 +170,11 @@ Vue.createApp ({
 
     beforeMount () {
 
+        // onMount "activeContact" is the first element in "contatti"
         this.activeContact = this.contatti[0];
 
+        /* onMount "contattiFiltered" is equal to "contatti" 
+        (filter has not been applied yet) */
         this.contattiFiltered = this.contatti;
 
     }
