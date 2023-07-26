@@ -157,7 +157,8 @@ Vue.createApp ({
 
         /* Called by input in left side searchbar. "contattiFiltered" array of 
         objects is reactively created by a "filter" function on "contatti" original 
-        data array. Used twice "toLowerCase" function to bypass case sensitivity */
+        data array. Used twice "toLowerCase" function to bypass case sensitivity.
+        https://www.youtube.com/watch?v=-KI23GLNZuE */
         filterContacts () {
 
             this.contattiFiltered = this.contatti.filter((contact) => 
